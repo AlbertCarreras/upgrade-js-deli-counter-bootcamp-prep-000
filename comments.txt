@@ -1,0 +1,92 @@
+var is an array. store client names. and gives the position in line. all functions will take the array variable as argument
+
+1st function works in 3 steps:
+	1. it takes a name  and an array where we'll store the names as inputs
+	2. appends the name value into the array
+	3. returns a sentence with the name and it's position in the array
+
+		>> takes two arguments: client name and array (in this case katzDeliLine)
+		>> .push method. adds a new element (name) at the end of the array
+		>> interpolate the argument name
+		>> and array with the .length property
+
+2nd function works in 7 steps:
+	1. it takes an array storing our client names as input
+	2. creates a new local empty array variable which is going to store our final message
+	3. takes the array, and creates a conditional based on it's lenght.  
+	4. if not empty, reassigns to the message variable a text stating the name of first position client in the array 
+	5. then removes first position element from array
+	6. if empty reassigns the message with a plain text saying there's nobody inline.
+	7 return the reassigned message variable
+
+		>> takes 1 argument: the array 
+		>> length propertinterpolate the array with the 
+		>> element property using square brakes and 0 as the index number
+		>> shift method property to permanently remove first element on array 
+
+3rd function works in 8 steps:
+	1. it takes an array storing our client names as input
+	2. creates a new local empty array variable which is going to store our final message
+	3. takes the array, and creates a conditional based on its length.  
+	4. if not empty, creates a new local empty array variable to store information from the loop
+	5. runs a loop for each array element
+	6. on each loop, adds into the array an string with the ordinal position value and the name value from the array
+	7. if empty reassigns the message variable with a plain text saying there's nobody inline.
+	8. return the message variable
+
+		>> takes 1 argument: the array
+		>> length property
+		>> for loop. var i up to array length with 1 unit increments  
+		>> push method taking string interpolating array element property based on i value from for loop
+		>> interpolate the local array from the loop
+
+
+==============================================================
+
+
+>>>> easy improvements <<<<
+
+1. constant instead variable katzDeliLine
+2. remove katzDeliLine constant as a function argument and use it directly instead of the array argument
+3. use forEach method instead of for loop (for each katzDeliLine element)
+4. use interpolation using join method to build the message on currentLine function
+
+>>>> code upgrades <<<
+
+1. interact a little bit more with the DOM >> create a HTML file with:
+	 a form input
+	 a NowServing Button
+	 a welcome message text using document method getElementById
+	 a now serving text using document method getElementById
+	 a current line text using document method getElementById
+	
+	HTML will have a javascript function calling the takeANumber function
+	function
+
+	read a CSS file for stylesheet
+
+2. CSS file for some stylesheet
+
+3. JS file
+	1. constants
+		a welcome message text using document method getElementById
+		a now serving text using document method getElementById
+		a current line text using document method getElementById
+
+	2. Event listener on submit calling takaANumber function 
+	3. takeANumber function
+		take an event as argument 
+		prevent default for the event
+		variable name to store name input from form using document method getElementById and value property
+		add name to katzDeliLine array
+		change HTML message using .innerHTML method on the welcome constant
+		callback to currentLine function
+
+	4. nowServing function
+		change HTML message using .innerHTML method on the nowServing constant
+		callback to currentLine function
+
+	5. currentLine function
+		change HTML message using .innerHTML method on the currentLine constant
+ 
+// made currentLine a callback function
